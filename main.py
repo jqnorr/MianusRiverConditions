@@ -1,16 +1,14 @@
-# This is a sample Python script.
+import streamlit as st
 
-# Press ⌃R to execute it or replace it with your code.
-# Press Double ⇧ to search everywhere for classes, files, tool windows, actions, and settings.
+st.set_page_config(
+    page_title="Mianus River Conditions",
+    page_icon="🌊"
+)
 
+st.title("Mianus River Conditions")
+st.write("Wind, weather, and tidal forecasts for the Mianus River.")
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press ⌘F8 to toggle the breakpoint.
+date = st.date_input("Select a date")
+time = st.time_input("Select a time")
 
-
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+st.write(f"Selected forecast: {date} at {time}")
